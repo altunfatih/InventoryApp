@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Home Page</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+	crossorigin="anonymous">
+<title>Inventory</title>
+</head>
+
+<body>
+	<div th:insert="fragments/header :: header"></div>
+	<div class="card">
+		<div class="card text-center">
+			<div class="card-header">
+				<h5 class="card-title">Welcome To Inventory System</h5>
+			</div>
+			<div class="card-body">
+				<div sec:authorize="isAuthenticated()">
+					Welcome <b><span sec:authentication="name">Username</b></span>
+					&nbsp; <span sec:authentication="principal.authorities">Roles</span>
+				</div>
+				<h5 class="card-title">Hi, there!</h5>
+				<p class="card-text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis
+					in eu mi bibendum neque egestas congue quisque egestas. Et
+					malesuada fames ac turpis egestas maecenas pharetra convallis.
+					Consequat interdum varius sit amet mattis. Ornare quam viverra orci
+					sagittis. Iaculis at erat pellentesque adipiscing commodo elit.
+					Massa enim nec dui nunc mattis. Dictum sit amet justo donec enim
+					diam. Massa tincidunt dui ut ornare lectus sit amet. Purus in
+					mollis nunc sed. Cursus vitae congue mauris rhoncus aenean vel elit
+					scelerisque mauris. Eu sem integer vitae justo eget magna fermentum
+					iaculis. Massa placerat duis ultricies lacus sed turpis tincidunt.
+					Fermentum posuere urna nec tincidunt praesent semper feugiat nibh.
+					Felis eget velit aliquet sagittis id consectetur purus ut. Quis
+					varius quam quisque id. Ac placerat vestibulum lectus mauris
+					ultrices eros. Suspendisse faucibus interdum posuere lorem ipsum
+					dolor sit amet. <br> <br> Consequat semper viverra nam
+					libero justo. Ut consequat semper viverra nam libero justo laoreet.
+					Quisque non tellus orci ac auctor augue. Urna nunc id cursus metus
+					aliquam. Quam quisque id diam vel quam. Massa id neque aliquam
+					vestibulum morbi blandit cursus risus. Ultrices eros in cursus
+					turpis. Urna neque viverra justo nec ultrices dui sapien. Tincidunt
+					id aliquet risus feugiat in ante metus dictum at. Dictumst quisque
+					sagittis purus sit amet volutpat consequat mauris nunc. Faucibus in
+					ornare quam viverra orci sagittis eu volutpat odio. Tristique
+					senectus et netus et malesuada fames ac turpis. Cursus turpis massa
+					tincidunt dui. At tempor commodo ullamcorper a. Purus sit amet
+					volutpat consequat mauris nunc congue nisi vitae. Mollis aliquam ut
+					porttitor leo a. In nisl nisi scelerisque eu ultrices vitae auctor.
+					<br><br><br><b>Role USER:</b> view list (<b>ID:</b> fatih <b>Password:</b> 1234) 
+					<br><br><b>Role EDITOR:</b> view, create and edit (<b>ID:</b> java <b>Password:</b> java) 
+					<br><br><b>Role ADMIN:</b> view, create, edit and delete (<b>ID:</b> admin <b>Password:</b> admin)
+				</p>
+			</div>
+		</div>
+	</div>
+	<div th:insert="fragments/footer :: footer"></div>
+</body>
+</html>
