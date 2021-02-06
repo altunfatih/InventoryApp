@@ -24,32 +24,32 @@ http://localhost:2323
 
 ## Screenshots
 
-#### Database
+### Database
 ![Database](https://github.com/altunfatih/InventoryApp/blob/master/images/database.png)
 
-#### Login
+### Login
 ![Login](https://github.com/altunfatih/InventoryApp/blob/master/images/login.png)
 
-#### Home
+### Home
 ![Home](https://github.com/altunfatih/InventoryApp/blob/master/images/home.png)
 
-#### Category List
+### Category List
 ![Home](https://github.com/altunfatih/InventoryApp/blob/master/images/categoryList.png)
 
-#### Create New Category
+### Create New Category
 ![Home](https://github.com/altunfatih/InventoryApp/blob/master/images/createCategory.png)
 
 #### Product List
 ![Home](https://github.com/altunfatih/InventoryApp/blob/master/images/productList.png)
 
-#### Create New Product
+### Create New Product
 ![Home](https://github.com/altunfatih/InventoryApp/blob/master/images/createProduct.png)
 
-#### Brand List
+### Brand List
 ![Home](https://github.com/altunfatih/InventoryApp/blob/master/images/brandList.png)
 
-#### Create New Brand
+### Create New Brand
 ![Home](https://github.com/altunfatih/InventoryApp/blob/master/images/createBrand.png)
 
-#### Error Page
+### Error Page
 ![Error](https://github.com/altunfatih/InventoryApp/blob/master/images/error.png)
