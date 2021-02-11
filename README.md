@@ -53,3 +53,6 @@ http://localhost:2323
 
 ### Error Page
 ![Error](https://github.com/altunfatih/InventoryApp/blob/master/images/error.png)
+
+### Swagger Page
+![Swagger](https://github.com/altunfatih/InventoryApp/blob/master/images/swagger2.png)
