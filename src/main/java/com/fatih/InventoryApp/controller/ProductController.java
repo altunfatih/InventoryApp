@@ -10,13 +10,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.fatih.InventoryApp.entity.Category;
 import com.fatih.InventoryApp.entity.Product;
 import com.fatih.InventoryApp.repository.CategoryRepository;
 import com.fatih.InventoryApp.repository.ProductRepository;
 
+import io.swagger.annotations.ApiOperation;
+
 @Controller
+@RequestMapping("/api")
 public class ProductController {
 
 	@Autowired
@@ -26,6 +30,7 @@ public class ProductController {
 	private CategoryRepository categoryRepo;
 
 	@GetMapping("/products/new")
+	@ApiOperation(value = "Show New Product")
 	public String showNewProductForm(Model model) {
 		List<Category> listCategories = categoryRepo.findAll();
 
@@ -36,6 +41,7 @@ public class ProductController {
 	}
 
 	@PostMapping("/products/save")
+	@ApiOperation(value = "Save Product")
 	public String saveProduct(Product product, HttpServletRequest request) {
 		String[] detailIDs = request.getParameterValues("detailID");
 		String[] detailNames = request.getParameterValues("detailName");
@@ -54,6 +60,7 @@ public class ProductController {
 	}
 
 	@GetMapping("/products")
+	@ApiOperation(value = "List Product")
 	public String listProducts(Model model) {
 		List<Product> listProducts = productRepo.findAll();
 		model.addAttribute("listProducts", listProducts);
@@ -61,7 +68,8 @@ public class ProductController {
 		return "products";
 	}
 
-	@GetMapping("products/edit/{id}")
+	@GetMapping("/products/edit/{id}")
+	@ApiOperation(value = "Show Edit Product")
 	public String showEditProductForm(@PathVariable("id") Integer id, Model model) {
 		Product product = productRepo.findById(id).get();
 		model.addAttribute("product", product);
@@ -73,7 +81,8 @@ public class ProductController {
 		return "product_form";
 	}
 
-	@GetMapping("products/delete/{id}")
+	@GetMapping("/products/delete/{id}")
+	@ApiOperation(value = "Delete Product")
 	public String deleteProductForm(@PathVariable("id") Integer id, Model model) {
 		productRepo.deleteById(id);
 
