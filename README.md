@@ -6,6 +6,7 @@ This is an inventory application for e-commerce.
 - Thymelaf
 - Bootstrap
 - MySQL
+- Swagger
 
 
 ## Requirements
